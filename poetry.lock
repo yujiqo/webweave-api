@@ -806,7 +806,18 @@ files = [
     {file = "websockets-11.0.3.tar.gz", hash = "sha256:88fc51d9a26b10fc331be344f1781224a375b78488fc343620184e95a4b27016"},
 ]
 
+[[package]]
+name = "youtube-dl"
+version = "2021.12.17"
+description = "YouTube video downloader"
+optional = false
+python-versions = "*"
+files = [
+    {file = "youtube_dl-2021.12.17-py2.py3-none-any.whl", hash = "sha256:f1336d5de68647e0364a47b3c0712578e59ec76f02048ff5c50ef1c69d79cd55"},
+    {file = "youtube_dl-2021.12.17.tar.gz", hash = "sha256:bc59e86c5d15d887ac590454511f08ce2c47698d5a82c27bfe27b5d814bbaed2"},
+]
+
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "015f84bf3ae4d295fbd779e5cac7b5c96a46e0b646a6d0c36de9e4682387d909"
+content-hash = "3ae56668eda0f24dca410d72bfbe382df8fd5a04eeb9f978e13b597143a4e4e7"
