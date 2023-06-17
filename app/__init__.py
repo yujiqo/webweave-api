@@ -1,8 +1,12 @@
 from fastapi import FastAPI
+
 from .server import Server
+from .config import setup_app
 
 
 def server(_=None) -> FastAPI:
-    app = Server().server
+    app = Server()
 
-    return app
+    setup_app(env=app.env)
+
+    return app.server
