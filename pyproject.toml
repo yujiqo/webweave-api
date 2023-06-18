@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "webweave-api"
+version = "0.1.0"
+description = ""
+authors = ["Danil <danilastolyarov97@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = {extras = ["all"], version = "^0.96.1"}
+uvicorn = {extras = ["standart"], version = "^0.22.0"}
+python-dotenv = "^1.0.0"
+pytube = "^15.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
