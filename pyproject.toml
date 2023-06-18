@@ -10,6 +10,7 @@ python = "^3.11"
 fastapi = {extras = ["all"], version = "^0.96.1"}
 uvicorn = {extras = ["standart"], version = "^0.22.0"}
 python-dotenv = "^1.0.0"
+pytube = "^15.0.0"
 
 
 [build-system]

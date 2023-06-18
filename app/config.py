@@ -1,5 +1,8 @@
-from typing import Dict
+from typing import Dict, Tuple
 from dotenv import dotenv_values
+from fastapi import APIRouter
+
+from .routers import youtube
 
 
 def read_env() -> Dict[str, str | None]:
@@ -9,3 +12,6 @@ def read_env() -> Dict[str, str | None]:
 
 def setup_app(env: Dict[str, str | None]) -> None:
     pass
+
+
+routers: Tuple[APIRouter] = (youtube.router, )
