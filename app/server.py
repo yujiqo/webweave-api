@@ -1,5 +1,6 @@
-from typing import Self, Optional, Any, Dict
+from typing import Self, Optional, Any, Dict, Tuple
 from fastapi import FastAPI
+from fastapi.routing import APIRouter
 
 from .config import read_env
 
@@ -21,3 +22,7 @@ class Server:
 
     def __getattr__(self, name: str) -> Any:
         return self.__dict__[f"_{name}"]
+
+    def register_routers(self, routers: Tuple[APIRouter]) -> None:
+        for router in routers:
+            self._server.include_router(router)
