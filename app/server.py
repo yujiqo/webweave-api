@@ -1,14 +1,11 @@
-from typing import Self, Optional, Any, Dict, Tuple
+from typing import Self, Optional, Any, Tuple
 from fastapi import FastAPI
 from fastapi.routing import APIRouter
-
-from .config import read_env
 
 
 class Server:
     __instance: Optional[Self] = None
     _server: FastAPI
-    _env: Dict[str, str | None]
 
     def __new__(cls) -> Self:
         if cls.__instance is None:
@@ -18,7 +15,6 @@ class Server:
 
     def __init__(self) -> None:
         self._server = FastAPI()
-        self._env = read_env()
 
     def __getattr__(self, name: str) -> Any:
         return self.__dict__[f"_{name}"]
